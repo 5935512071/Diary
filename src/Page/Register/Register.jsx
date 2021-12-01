@@ -13,7 +13,7 @@ const Register = () => {
     try {
       firebaseConfig
         .auth()
-        .signInWithEmailAndPassword(email, password)
+        .createUserWithEmailAndPassword(email, password)
         .then((res) => {
           const isNewUser = res?.additionalUserInfo?.isNewUser;
           console.log("res", res);

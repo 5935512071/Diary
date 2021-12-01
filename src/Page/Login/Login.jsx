@@ -33,7 +33,7 @@ const Login = () => {
   return (
     <>
       <div className="login">
-        <span className="loginTitle">Register</span>
+        <span className="loginTitle">Login</span>
         <form className="loginForm ">
           <label>Email</label>
           <input
