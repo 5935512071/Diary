@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { useHref, Link } from "react-router-dom";
 import "./Login.css";
 import firebaseConfig from "../../config";
+import history from "../../history";
 
 const Login = () => {
-  //   const [currentUser, setCurrentUser] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -20,15 +21,15 @@ const Login = () => {
           alert("Login success!");
           //   }
         });
-      //   setCurrentUser(true);
+      setCurrentUser(true);
     } catch (error) {
       console.log(error);
     }
   };
 
-  //   if (currentUser) {
-  //     this.props.history.push("/");
-  //   }
+  if (currentUser) {
+    history.push("/");
+  }
 
   return (
     <>
